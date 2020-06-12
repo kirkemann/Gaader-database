@@ -1,0 +1,34 @@
+GET http://localhost:5002/bruger/admin
+
+###
+
+GET http://localhost:5002/bruger/admin/5ee0d07545f9347900ce729e
+
+
+###
+POST http://localhost:5002/bruger/admin
+Content-Type: application/json
+
+{
+    "brugernavn": "Jan Jansen",
+    "email": "p@p.dk",
+    "password": "123456"
+}
+
+###
+
+PUT http://localhost:5002/bruger/admin/5ee0d07545f9347900ce729e
+Content-Type: application/json
+
+{
+    "brugernavn": "tim Timsen",
+    "email": "t@t.dk",
+    "password": "123456"
+}
+###
+
+DELETE http://localhost:5002/bruger/admin
+
+###
+
+//mongodb+srv://Kirkemann:<password>@kirkemann-ah9zl.azure.mongodb.net/test

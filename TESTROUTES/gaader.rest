@@ -1,0 +1,32 @@
+GET http://localhost:5002/gaarder
+
+###
+
+GET http://localhost:5002/gaarder/admin/5ee0b66ca2378390e453664f
+
+
+###
+POST http://localhost:5002/gaarder/admin
+Content-Type: application/json
+
+{
+    "name": "Måge Jokeseeeee",
+    "gaarden": "Hvad er mågernes ynglings betalings måde? – Mågebilepay3"
+}
+
+###
+
+DELETE http://localhost:5002/gaarder/admin
+
+###
+
+PATCH  http://localhost:5002/gaarder/admin/5ee0b66ca2378390e453664f
+Content-Type: application/json
+
+{
+    "name": "New Name"
+}
+
+###
+
+GET http://localhost:5002/gaarder/soeg/
