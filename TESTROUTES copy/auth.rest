@@ -1,0 +1,15 @@
+POST https://gaarder.herokuapp.com/auth/login
+Content-Type: application/json
+
+{
+"email": "p@p.dk",
+"password": "123456"
+}
+
+###
+
+GET https://gaarder.herokuapp.com/auth/logout
+
+###
+
+GET https://gaarder.herokuapp.com/auth/loggedin

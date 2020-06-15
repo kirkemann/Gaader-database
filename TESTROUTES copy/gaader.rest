@@ -1,0 +1,32 @@
+GET https://gaarder.herokuapp.com/gaarder
+
+###
+
+GET https://gaarder.herokuapp.com/gaarder/admin/5ee0b66ca2378390e453664f
+
+
+###
+POST https://gaarder.herokuapp.com/gaarder/admin
+Content-Type: application/json
+
+{
+    "name": "Måge Jokeseeeee",
+    "gaarden": "Hvad er mågernes ynglings betalings måde? – Mågebilepay3"
+}
+
+###
+
+DELETE https://gaarder.herokuapp.com/gaarder/admin
+
+###
+
+PATCH  https://gaarder.herokuapp.com/gaarder/admin/5ee0b66ca2378390e453664f
+Content-Type: application/json
+
+{
+    "name": "New Name"
+}
+
+###
+
+GET http://localhost:5002/gaarder/soeg/

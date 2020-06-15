@@ -1,0 +1,34 @@
+GET https://gaarder.herokuapp.com/bruger/admin
+
+###
+
+GET https://gaarder.herokuapp.com/bruger/admin/5ee358b454a15fe580d9232f
+
+
+###
+POST https://gaarder.herokuapp.com/bruger/admin
+Content-Type: application/json
+
+{
+    "brugernavn": "Jan Jansen",
+    "email": "p@p.dk",
+    "password": "123456"
+}
+
+###
+
+PUT https://gaarder.herokuapp.com/bruger/admin/5ee0d07545f9347900ce729e
+Content-Type: application/json
+
+{
+    "brugernavn": "tim Timsen",
+    "email": "t@t.dk",
+    "password": "123456"
+}
+###
+
+DELETE https://gaarder.herokuapp.com/gaarder/bruger/admin
+
+###
+
+//mongodb+srv://Kirkemann:<password>@kirkemann-ah9zl.azure.mongodb.net/test
