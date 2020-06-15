@@ -5,24 +5,17 @@ const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
 const session = require('express-session')
-const PORT = 5002
 
 const TWO_HOURS = 1000 * 60 * 60 * 2
 
-const {
-    NODE_ENV = 'development',
-    SESS_NAME = 'sid',
-    SES_SECRET = 'ssh!quiet,it\'asecret!',
-    // SESS_LIFETIME = TWO_HOURS
-} = process.env
 
-const IN_PROD = NODE_ENV === 'production'
+const IN_PROD = process.env.NODE_ENV === 'production'
 
 app.use(session({
-    name: SESS_NAME,
+    name: process.env.SESS_NAME,
     resave: false,
     saveUninitialized: false,
-    secret: SES_SECRET,
+    secret: process.env.SES_SECRET,
     cookie: {
         maxAge: TWO_HOURS,
         samSite: true,
@@ -41,7 +34,7 @@ db.on('open', () => console.log('Connected to Database'))
 
 app.use(cors())
 app.use(express.json())
-
+app.use(express.urlencoded({ extended: true}));
 
 // authorization - adgang til admin
 
@@ -63,4 +56,4 @@ app.use('/bruger/admin', brugerRouter)
 const authRouter = require('./routes/auth.routes')
 app.use('/auth', authRouter)
 
-app.listen(PORT, () => console.log('Server køre på ' + PORT))
+app.listen(process.env.PORT, () => console.log('Server køre på ' + process.env.PORT))
