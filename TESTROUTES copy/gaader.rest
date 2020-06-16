@@ -10,7 +10,7 @@ POST https://gaarder.herokuapp.com/gaarder/admin
 Content-Type: application/json
 
 {
-    "name": "Måge Jokeseeeee252525",
+    "name": "Måge Jokeseeeee8455555",
     "gaarden": "Hvad er mågernes ynglings betalings måde? – Mågebilepay3"
 }
 

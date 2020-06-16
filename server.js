@@ -32,7 +32,7 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.on('open', () => console.log('Connected to Database'))
 
-app.use(cors())
+app.use(cors({ credentials: true, origin: true }));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}));
 

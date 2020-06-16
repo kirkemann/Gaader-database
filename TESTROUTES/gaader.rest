@@ -10,7 +10,7 @@ POST http://localhost:5002/gaarder/admin
 Content-Type: application/json
 
 {
-    "name": "Måge Jokeseeeee",
+    "name": "Måge Jokeseeeee11111111",
     "gaarden": "Hvad er mågernes ynglings betalings måde? – Mågebilepay3"
 }
 

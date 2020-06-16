@@ -24,6 +24,7 @@ router.post('/login', async (req, res) => {
       throw err;
     }
 
+    
     if (isMatch){
 
       req.session.userId = bruger._id
