@@ -24,14 +24,14 @@ router.post('/login', async (req, res) => {
       throw err;
     }
 
-    
+
     if (isMatch){
 
       req.session.userId = bruger._id
       res.status(200).json({ brugernavn: bruger.brugernavn })
 
     } else {
-      res.status(401).json({ message: "Du blev ikke login - brugernavn eller password passer ikke"})
+      res.clearCookie(process.env.SESS_NAME).status(401).json({message: 'Du blev ikke login - brugernavn eller password passer ikke'})
     }
 
   })
@@ -43,12 +43,10 @@ router.post('/login', async (req, res) => {
 
 router.get('/logout', async (req, res) => {
 
-  req.session.destroy(err => {
-     if(err) return res.status(500).json({ message: 'Logud lykkes ikke'})
+  console.log("logud");
 
-      res.clearCookie(process.env.SESSION_NAME).status(200).json({message: 'Cookie er slettet'})
+  res.clearCookie(process.env.SESS_NAME).json({message: 'Du blev logged out'})
 
-  })
 
 })
 
